@@ -1,0 +1,65 @@
+[
+    {
+        "category": "crochet",
+        "image": "img/Carrusel/nube.jpg",
+        "title": "Nube",
+        "details": [
+        "Nube con tamaño 10x10",
+        "",
+        ""
+        ],
+        "price": "15€"
+    },
+    {
+        "category": "patron",
+        "image": "img/Carrusel/cerdi.jpg",
+        "title": "Cerdito",
+        "details": [
+            "Patron de cerdito",
+            "Incluye vídeo tutoriales"
+        ],
+        "price": "20€"
+    },
+    {
+        "category": "crochet",
+        "image": "img/Carrusel/pingu.jpg",
+        "title": "Pingu",
+        "details": [
+            "Pingu con tamaño 35x35",
+            "",
+            ""
+        ],
+        "price": "25€"
+    },
+    {
+        "category": "crochet",
+        "image": "img/Carrusel/evee.jpg",
+        "title": "Evee",
+        "details": [
+        "Eve tamaño 40x40",
+        "",
+        ""
+        ],
+        "price": "25€"
+    },
+    {
+        "category": "patron",
+        "image": "img/Carrusel/yoda.jpg",
+        "title": "Mini Yoda",
+        "details": [
+            "Patro de Mini Yoda",
+            "Incluye vídeo tutoriales"
+        ],
+        "price": "25€"
+    },
+    {
+        "category": "Patron",
+        "image": "img/Carrusel/pendientes.jpg",
+        "title": "Pendientes",
+        "details": [
+            "Patron para pendientes de diferentes tamaños",
+            "Incluye vídeo tutoriales"
+        ],
+        "price": "10€"
+        }
+]

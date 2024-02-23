@@ -1,0 +1,145 @@
+/* Añade estos estilos a tu archivo de estilos principal o crea un archivo separado para el carrito */
+
+/* cart.css */
+
+.cart-modal {
+    display: none;
+    position: fixed;
+    bottom: 60px; /* Ajusta la posición según tus necesidades */
+    right: 20px; /* Ajusta la posición según tus necesidades */
+    width: 300px;
+    /* max-height: 40rem; */
+    /* overflow-y: auto !important; */
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.cart-header {
+    background-color: var(--color-primary);
+    color: #fff;
+    color: var(--color-nav-links);
+    padding: 0rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-items {
+    padding: 20px;
+    max-height: 40rem;
+    overflow-y: auto !important;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-item-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.cart-total{
+    font-size: 1.4rem;
+    text-align: end;
+    padding: 1rem 2rem;
+}
+
+.close-cart-btn {
+    cursor: pointer;
+    font-size: 2.6rem;
+}
+
+.btn-remove-item{
+    width: 8rem;
+    height: 4rem;
+    justify-self: center;
+    align-items: center;
+}
+
+.cart-total-container{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding: 1rem 2rem;
+}
+
+
+.btn-pagar:link,
+.btn-pagar:visited {
+    background-color: #087f5b;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 100px;
+    width: 10rem;
+    height: 4rem;
+    padding-top: 1rem;
+    align-self: center;
+    align-content: center;
+}
+
+.btn-pagar:hover,
+.btn-pagar:active {
+    background-color: #099268;
+}
+
+/* Estilo para el botón de eliminar en cada artículo del carrito */
+.cart-item-details .btn-remove-item {
+    background-color: #ff0000; /* Color de fondo rojo */
+    color: #fff; /* Color del texto blanco */
+    padding: 5px 10px; /* Relleno interno */
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilo adicional, si deseas agregar un efecto al pasar el ratón sobre el botón */
+.cart-item-details .btn-remove-item:hover {
+    background-color: #cc0000; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilo para la notificación del carrito */
+.cart-notification {
+    /* position: fixed; */
+    /* position: relative; */
+    /* order: 1; */
+    /* top: 1rem; */
+    /* right: 24rem; */
+    /* background-color: red; */
+    background: var(--gradient-primary);
+    color: white;
+    /* padding: 5px 10px; */
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    /* align-self: center; */
+    text-align: center;
+    
+}
+
+@media (max-width: 1880px){
+    .cart-notification{
+        /* right: 22rem;  */
+    }
+}

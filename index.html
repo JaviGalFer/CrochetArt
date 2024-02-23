@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CrochetArt es una página web sobre el arte del crochet, incluyendo venta de artículos y patrones"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carrusel/stylesCarrusel.css">
+    <link rel="stylesheet" href="css/footer/stylesFooter.css">
+    <link rel="stylesheet" href="css/header/stylesHeader.css">
+    <link rel="stylesheet" href="css/login/stylesLogin.css">
+    <link rel="stylesheet" href="css/nav/stylesNav.css">
+    <link rel="stylesheet" href="css/shop/stylesShop.css">
+    <link rel="stylesheet" href="css/cart/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="module" src="js/main.js" defer></script>
+    <title>Crochet art</title>
+    <link rel="icon" href="img/logo-preview.jpg">
+</head>
+<body>
+    
+    <!-- //////////////////////////////////SECTION HEADER////////////////////////// -->
+    <header class="">
+        <!-- //////////////////////////////NAV SUPERIOR//////////////////////////// -->
+        <div class="nav">
+            <div class="nav-logo">
+                <img src="img/logo.png" alt="nav-logo" class="img-nav-logo">
+            </div>
+            <nav class="nav-links-izq">
+                <ul class="">
+                    <!-- <li class="nav-item"> -->
+                        <!-- <img src="img/logo.png" alt="nav-logo" class="nav-logo"> -->
+                    <!-- </li> -->
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link btn--scroll-to">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#section-2" class="nav-link btn--scroll-to">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#section-3" class="nav-link btn--scroll-to">Shop</a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+            </nav>
+            <nav class="nav-links-der">
+                <ul class="">
+                    <li class="nav-item">
+                        <a href="#" class="nav-icon iconCarrito">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                            fill="none" 
+                            viewBox="0 0 24 24" 
+                            stroke-width="1.5" 
+                            stroke="currentColor" 
+                            class="iconLog">
+                                <path stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-icon btn--show-modal">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke-width="1.5" 
+                                stroke="currentColor" 
+                                class="iconLog">
+                                <path stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="hamburger nav-item">
+                        <a href="#" class="nav-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                            fill="none" 
+                            viewBox="0 0 24 24" 
+                            stroke-width="1.5" 
+                            stroke="currentColor" 
+                            class="iconBurger">
+                                <path stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+
+        <!-- CARTMODAL CONTAINER -->
+        <div id="cartModal" class="cart-modal">
+            <ul id="cartItems" class="cart-items">
+                <!-- Los elementos del carrito se agregarán aquí dinámicamente -->
+            </ul>
+            <button id="closeCartBtn" class="btn--close-cart">&times;</button>
+        </div>
+        
+
+        <!-- //////////MENU MOBILE CONTAINER -->
+        <div class="mobile-menu-container">
+            <div class="mobile-menu">
+                <div class="close-button">
+                    <span class="close-icon">&times;</span>
+                </div>
+                <div class="login-button">
+                    <a href="#" class="nav-icon btn--show-modal">
+                            
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                            fill="none" 
+                            viewBox="0 0 24 24" 
+                            stroke-width="1.5" 
+                            stroke="currentColor" 
+                            class="iconLog">
+                            <path stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="cart-button-mobile">
+                    <a href="#" class="nav-icon iconCarrito">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke-width="1.5" 
+                        stroke="currentColor" 
+                        class="iconLog">
+                            <path stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="#home" class="btn--scroll-to">Home</a></li>
+                    <li><a href="#" class="">Blog</a></li>
+                    <li><a href="#section-2" class="btn--scroll-to">Galeria</a></li>
+                    <li><a href="#section-3" class="btn--scroll-to">Shop</a></li>
+                    <!-- Agrega otras opciones de menú según sea necesario -->
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- ////////////////////////////SECTION PRINCIPAL/////////////////////// -->
+    <main>
+        <div class="header-tittle" id="home">
+            <div class="gridUno"></div>
+            <h1 class="header-h1">
+                Tejemos historias con hilos de 
+                <span class="highlight">creatividad</span> y <span class="highlight">pasión</span>.
+            </h1>
+            <h4>
+                Descubre la magia del crochet artesanal con nuestros exclusivos patrones y piezas únicas. Transforma tu inspiración en realidad, desde encantadoras prendas hasta adorables muñecos.
+            </h4>
+            <h4>¡Bienvenido a un universo de hilos, texturas y creaciones únicas que dan vida a tus sueños tejidos a mano!
+                
+            </h4>
+
+            <img src="img/fotoHeader.png" alt="imagen" class="header-img">
+            <div class="gridDos"></div>
+        </div>
+    </main>
+    
+    <!-- ////////////////////////////////SECTION2 CARRUSEL////////////////////////////////// -->
+    <section class="section-2" id="section-2">
+        <div class="acordeon">
+            <div class="item open">
+                <p class="numero">01</p>
+                <p class="texto">Nuestros Productos Artesanales</p>
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
+                    stroke="currentColor" class="icon" name="down">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" name="up">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                </svg>
+    
+                <div class="hidden-box">
+                    <p> 
+                        Utilizamos materiales de alta calidad, como lana, algodón, acrílico y fibras naturales. 
+                        Seleccionamos cuidadosamente cada material para garantizar la calidad y durabilidad de nuestros productos.
+                    </p>
+                    <ol>
+                        <li>
+                            ¿Ofrecemos opciones personalizadas?
+                            <ul>
+                                <li>
+                                    Sí, creamos productos personalizados según tus preferencias de color, tamaño y estilo.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            ¿Qué hace especial a nuestros productos de crochet?
+                            <ul>
+                                <li>
+                                    Destacamos la meticulosa artesanía y el diseño único de cada pieza, tejida con pasión y atención al detalle.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            ¿Cómo cuidar y lavar las prendas de crochet?
+                            <ul>
+                                <li>
+                                    Proporcionamos instrucciones detalladas para el cuidado de nuestras creaciones, garantizando durabilidad y belleza a lo largo del tiempo.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <p class="numero">02</p>
+                <p class="texto">Nuestros Patrones de Crochet</p>
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
+                    stroke="currentColor" class="icon" name="down">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" name="up">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                </svg>
+    
+                <div class="hidden-box">
+                    <p> 
+                        Nuestros patrones están diseñados para todos los niveles, desde principiantes hasta expertos. 
+                        Cada uno viene con instrucciones claras y apoyo.
+                    </p>
+                    <ol>
+                        <li>
+                            ¿Se pueden adaptar los patrones a diferentes tallas?
+                            <ul>
+                                <li>
+                                    Sí, nuestros patrones suelen ser adaptables. Además, ofrecemos asesoramiento para ajustes personalizados.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            ¿Hay tutoriales disponibles para seguir los patrones?
+                            <ul>
+                                <li>
+                                    Sí, proporcionamos tutoriales detallados en video y paso a paso para garantizar que disfrutes del proceso de creación.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            ¿Qué información incluye cada patrón?
+                            <ul>
+                                <li>
+                                    Cada patrón incluye información detallada sobre los materiales necesarios, las técnicas de crochet utilizadas, 
+                                    el nivel de dificultad, fotos ilustrativas y diagramas.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            ¿Cómo puedo descargar un patrón?
+                            <ul>
+                                <li>
+                                    Una vez que hayas comprado un patrón, podrás descargarlo en formato PDF desde tu cuenta de usuario.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="item">
+                <p class="numero">03</p>
+                <p class="texto">Conociendo al Equipo Creativo</p>
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
+                    stroke="currentColor" class="icon" name="down">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" name="up">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                </svg>
+    
+                <div class="hidden-box">
+                    <p> 
+                        Contamos con la experiencia y el conocimiento acumulado de varias generaciones de hábiles artesanas. 
+                        El crochet es parte de nuestra identidad familiar.
+                    </p>
+                    <ol>
+                        <li>
+                            ¿Cómo seleccionamos los materiales para su creacion?
+                            <ul>
+                                <li>
+                                    Valoramos la calidad y sostenibilidad. Seleccionamos cuidadosamente hilos y materiales que no solo sean hermosos, 
+                                    sino también respetuosos con el medio ambiente.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            ¿Cuánto tiempo lleva perfeccionar una nueva creación?
+                            <ul>
+                                <li>
+                                    Cada pieza lleva su tiempo, ya que nos esforzamos por garantizar calidad y originalidad. Desde la idea hasta el producto final, 
+                                    invertimos dedicación y cuidado en cada paso del proceso.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="carrusel">
+            <div class="slide">
+                <img src="img/Carrusel/cerdi.jpg" alt="Chica que se llama Maria" class="img-carrusel">
+            </div>
+            <div class="slide">
+                <img src="img/Carrusel/dos.jpg" alt="Ejemplo 2" class="img-carrusel">
+            </div>
+            <div class="slide">
+                <img src="img/Carrusel/evee.jpg" alt="Ejemplo 3" class="img-carrusel">
+            </div>
+            <div class="slide">
+                <img src="img/Carrusel/yoda.jpg" alt="Ejemplo 3" class="img-carrusel">
+            </div>
+            <button class="btn btn--left">
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke-width="1.5" 
+                    stroke="currentColor" 
+                    class="btn-icon">
+                    <path stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button class="btn btn--right">
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke-width="1.5" 
+                    stroke="currentColor" class="btn-icon">
+                    <path 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5" 
+                    />
+                </svg>
+            </button>
+            <div class="dots">
+                <button class="dot dot--fill">&nbsp</button>
+                <button class="dot">&nbsp</button>
+                <button class="dot">&nbsp</button>
+                <button class="dot  ">&nbsp</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ///////////////////////////////SECTION3//////////////////////////// -->
+    <section class="section-3" id="section-3">
+        <div class="filter-buttons">
+            <button class="filter-button" data-filter="all">Mostrar todo</button>
+            <button class="filter-button" data-filter="crochet">Crochet</button>
+            <button class="filter-button" data-filter="patron">Patrones</button>
+        </div>
+
+        <div class="grid-3-cols" id="cardContainer">
+        </div>
+    </section>
+
+
+    <!-- ///////////////////////////////FOOTER SECTION///////////////////// -->
+    <footer class="">
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Our Team</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Designed by <span class="designer">Javi</span></p>
+        </div>
+    </footer>
+
+    <!-- //////////////////////////////MODAL HIDDEN///////////// -->
+    <div class="modal hidden">
+        <button class="btn--close-modal">&times;</button>
+        <h2 class="modal__header">
+            <br />
+            <span class="highlight">Registro</span>
+        </h2>
+        <form class="modal__form" name=""cta-form netlify> 
+            <!-- <label>Nombre</label> -->
+            <input type="text" placeholder="Nombre" name="full-name" required/><br>
+            <!-- <label>Apellido</label> -->
+            <input type="text" placeholder="Apellido" name="last-name"/><br>
+            <!-- <label>Email</label> -->
+            <input type="email" placeholder="Email" name="email"/><br>
+            <!-- <input type="password" placeholder="contraseña" name="password" required> -->
+            <!-- <button class="btn-modal">Registrar &rarr;</button> -->
+            <input type="submit" class="btn-modal">
+        </form>
+    </div>
+    <div class="overlay hidden"></div>
+
+</body>
+</html>
