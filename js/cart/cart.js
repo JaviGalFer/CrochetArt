@@ -17,10 +17,10 @@ export function initializeCart() {
             <span class="close-cart-btn">&times;</span>
         </div>
         <div class="cart-items">
-            <!-- Aquí se mostrarán los elementos del carrito -->
+            <!-- Elementos del carrito -->
         </div>
         <div class="cart-total-container">
-            <!-- Nuevo contenedor para el total fuera del contenedor de elementos del carrito -->
+            <!-- Contenedor para el total -->
             
         </div>
     `;
@@ -28,17 +28,16 @@ export function initializeCart() {
     const closeCartBtn = cartModal.querySelector('.close-cart-btn');
     closeCartBtn.addEventListener('click', () => {
         cartModal.style.display = 'none';
+        showCartNotification(getCartQuantity());
     });
     
     // Agrega un manejador de eventos al menú móvil para abrir el carrito
     mobileMenu.addEventListener('click', (event) => {
         console.log("Mobile menu clicked");
-            console.log("Cart button clicked");
-            cartModal.style.display = 'block';
-            updateCartItems();
-            hideCartNotification();
-            event.stopPropagation();
-        
+        cartModal.style.display = 'block';
+        updateCartItems();
+        hideCartNotification();
+        event.stopPropagation();
     });
 
     cartIcon.addEventListener('click', () => {
@@ -143,6 +142,13 @@ export function initializeCart() {
         if (cartNotification) {
             cartNotification.style.display = 'none';
         }
+    }
+
+
+    // Función para obtener la cantidad de elementos en el carrito
+    function getCartQuantity() {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        return cartItems.length;
     }
 }
 // Exporta la función updateCartItems

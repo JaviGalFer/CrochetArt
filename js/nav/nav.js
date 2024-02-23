@@ -1,5 +1,4 @@
 // nav.js
-import { updateCartItems } from '../cart/cart.js';
 export function initializeHamburger() {
     const hamburgerIcon = document.querySelector('.iconBurger');
     const cartIcon = document.querySelector('.iconCarrito');
