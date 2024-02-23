@@ -315,6 +315,14 @@ transform: translateX(50%);
     .acordeon{
         width: 380px;
     }
+
+    .btn--left{
+        display: none;
+    }
+    
+    .btn--right{
+        display: none;
+    }
 }
 
 @media (max-width: 400px){
