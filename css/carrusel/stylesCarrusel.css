@@ -310,3 +310,9 @@ transform: translateX(50%);
         width: 450px;
     }
 }
+
+@media (max-width: 460px){
+    .acordeon{
+        width: 380px;
+    }
+}
