@@ -143,7 +143,8 @@ h3 {
 
 .filter-button {
     background-color: var(--color-primary);
-    color: #fff;
+    color: var(--color-nav-links);
+    font-weight: 600;
     padding: 1rem 2rem;
     border: none;
     border-radius: 8px;
@@ -154,6 +155,7 @@ h3 {
 
 .filter-button:hover {
     background-color: var(--color-primary-hover);
+    color: var(--color-nav-links-hover);
 }
 
 .filter-button.active {
