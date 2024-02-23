@@ -9,9 +9,6 @@ import { initializeCardContainer } from './card-container/card-container.js';
 import { initializeHamburger } from './nav/nav.js';
 import { initializeCart } from './cart/cart.js';
 
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     initializeHamburger(); 
     initializeStickyNavigation();
@@ -19,9 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeCarrusel();
     initializeModal();
     initializeSmoothScroll();
-    
     initializeAcordeon();
-    
     initializeFilter();
     initializeCardContainer();
     

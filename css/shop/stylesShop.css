@@ -132,11 +132,10 @@ h3 {
     align-items: center;
 }
 
-/* Filtro */
+/* ////////////////FILTROS///////////// */
 .filter-buttons {
     display: flex;
     gap: 16px;
-
     border-radius: 8px;
     overflow: hidden;
     margin: 2rem auto;
