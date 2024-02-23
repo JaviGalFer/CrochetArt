@@ -273,6 +273,12 @@ transform: translateX(50%);
     }
 }
 
+@media (max-width: 400px){
+    .dots{
+        transform: translateX(-26px) translateY(70px); 
+    }
+}
+
 
 /* MEDIA PARA EL ACORDEON */
 @media (max-width: 1490px){
