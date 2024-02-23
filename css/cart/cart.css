@@ -1,15 +1,15 @@
-/* Añade estos estilos a tu archivo de estilos principal o crea un archivo separado para el carrito */
-
 /* cart.css */
 
 .cart-modal {
     display: none;
     position: fixed;
-    bottom: 60px; /* Ajusta la posición según tus necesidades */
-    right: 20px; /* Ajusta la posición según tus necesidades */
-    width: 300px;
-    /* max-height: 40rem; */
-    /* overflow-y: auto !important; */
+    /* bottom: 60px;  */
+    bottom: 3.74rem;
+    /* right: 20px;  */
+    right: 2rem;
+    /* width: 300px; */
+    width: 30rem;
+
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -104,27 +104,20 @@
 
 /* Estilo para el botón de eliminar en cada artículo del carrito */
 .cart-item-details .btn-remove-item {
-    background-color: #ff0000; /* Color de fondo rojo */
-    color: #fff; /* Color del texto blanco */
-    padding: 5px 10px; /* Relleno interno */
+    background-color: #ff0000; 
+    color: #fff; 
+    padding: 5px 10px; 
     border: 0;
     border-radius: 12px;
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    cursor: pointer; 
 }
 
-/* Estilo adicional, si deseas agregar un efecto al pasar el ratón sobre el botón */
 .cart-item-details .btn-remove-item:hover {
-    background-color: #cc0000; /* Cambia el color de fondo al pasar el ratón */
+    background-color: #cc0000;
 }
 
 /* Estilo para la notificación del carrito */
 .cart-notification {
-    /* position: fixed; */
-    /* position: relative; */
-    /* order: 1; */
-    /* top: 1rem; */
-    /* right: 24rem; */
-    /* background-color: red; */
     background: var(--gradient-primary);
     color: white;
     /* padding: 5px 10px; */
@@ -138,8 +131,15 @@
     
 }
 
-@media (max-width: 1880px){
-    .cart-notification{
-        /* right: 22rem;  */
+
+@media (max-width: 1500px){
+    .cart-items{
+        max-height: 26rem;
+    }
+}
+
+@media (max-width: 800px){
+    .cart-items{
+        max-height: 14rem;
     }
 }

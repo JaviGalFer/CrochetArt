@@ -12,12 +12,15 @@
 
 /*///////////// ACORDEON///////////// */
 .acordeon{
-    width: 700px;
-    margin: 100px auto;
+    /* width: 700px; */
+    width: 65rem; 
+    /* margin: 100px auto; */
+    margin: 6.25rem auto;
 
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    /* gap: 24px; */
+    gap: 2rem;
 
 }
 
@@ -122,8 +125,6 @@
 .carrusel{
     width: 700px;
     margin: 100px auto;
-    /* background-color: #087f5b; */
-    /* color: #e6fcf5; */
     color: var(--color-nav-links-hover);
     padding: 32px;
     border-radius: 8px;
@@ -131,13 +132,11 @@
     gap: 96px;
     align-items: center;
     justify-content: center;
-    /* padding-left: 96px; */
     position: relative;
 }
 
 .slide{
     position: relative;
-    /* transform: translateX(-1.5rem); */
 }
 
 .img-carrusel{
@@ -175,7 +174,6 @@
 
 .btn--left{
     left: 0;
-    /* transform: translateX(-50%); */
 }
 
 .btn--right{
@@ -188,10 +186,6 @@ transform: translateX(50%);
     bottom: 0;
     left: 44%;
     transform: translateX(5px) translateY(70px);
-
-    /* transform: translateX(30px);
-    transform: translateY(70px); */
-
     display: flex;
     gap: 12px;
 
@@ -201,14 +195,12 @@ transform: translateX(50%);
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    /* border: 2px solid #087f5b; */
     border: 2px solid var(--color-primary-carrusel);
     background-color: white;
     cursor:pointer;
 }
 
 .dot--fill{
-    /* background-color: #087f5b; */
     background-color: var(--color-primary-carrusel);
 }
 
@@ -243,15 +235,23 @@ transform: translateX(50%);
     .img-carrusel{
         width: 150px;
     }
+
+    .btn--left{
+        left: -12rem;
+    }
+
+    .btn--right{
+        right:-12rem;
+    }
 }
 
 @media (max-width: 630px){
     .btn--left{
-        left: 11rem; 
+        /* left: 11rem;  */
     }
     
     .btn--right{
-        right: 13rem;
+        /* right: 13rem; */
     }
 
     .dots{
@@ -261,15 +261,22 @@ transform: translateX(50%);
 
 @media (max-width: 560px){
     .btn--left{
-        left: 9rem; 
+        left: -9rem; 
     }
     
     .btn--right{
-        right: 11rem;
+        right: -7rem; 
     }
 
     .dots{
         transform: translateX(3px) translateY(70px);
+    }
+}
+
+
+@media (max-width: 460px){
+    .dots{
+        transform: translateX(-20px) translateY(70px); 
     }
 }
 

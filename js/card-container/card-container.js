@@ -6,7 +6,7 @@ export function initializeCardContainer() {
             // CARDS CONTAINER
             const cardContainer = document.getElementById('cardContainer');
         
-            // Puedes cargar el archivo JSON de forma asíncrona
+            // Cargar el archivo JSON de forma asíncrona
             fetch('data/cards.json')
                 .then(response => response.json())
                 .then(cards => {
@@ -29,7 +29,7 @@ export function initializeCardContainer() {
                     <div class="shop-box">
                         <h3>${card.title}</h3>
                         <ul class="shop-details">
-                            ${card.details.map(detail => `<li>${getIcon(detail)} <span>${detail}</span></li>`).join('')}
+                            ${card.details.map(detail => `<li><span>${detail}</span></li>`).join('')}
                         </ul>
                         <div class="shop-price">
                             <strong>${card.price}</strong>
@@ -37,7 +37,7 @@ export function initializeCardContainer() {
                         </div>
                     </div>
                 `;
-                // Agrega un manejador de eventos al botón "Add to cart"
+                // Manejador de eventos al botón "Comprar"
                 const addToCartButton = figure.querySelector('.btnCards');
                 addToCartButton.addEventListener('click', addToCart);
                 return figure;
@@ -48,10 +48,10 @@ export function initializeCardContainer() {
                 event.preventDefault();
                 const cardData = JSON.parse(event.target.getAttribute('data-card'));
 
-                // Obtén los elementos del carrito desde el localStorage
+                // Obtenemos elementos del carrito desde el localStorage
                 const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-                // Verifica si el elemento ya está en el carrito
+                // Verificamos si el elemento ya está en el carrito
                 const existingItem = cartItems.find(item => item.title === cardData.title);
 
                 if (existingItem) {
@@ -64,28 +64,13 @@ export function initializeCardContainer() {
                         price: cardData.price,
                         image: cardData.image,
                         quantity: 1, // Inicializa la cantidad en 1
-                        // Agrega otros datos del elemento según sea necesario
                     });
                 }
 
-                // Guarda los elementos actualizados en el localStorage
+                // Guardamos los elementos actualizados en el localStorage
                 localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
-                // Actualiza visualmente el carrito
+                // Actualizamos visualmente el carrito
                 updateCartItems();
-            }
-
-            function getIcon(detail) {
-                // Aquí puedes mapear tus detalles a iconos específicos si es necesario
-                // Puedes adaptar esto según tus necesidades
-                switch (detail) {
-                    case 'Leisure and relaxing':
-                        return '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="shop-icon"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /> </svg>' ;
-                    case 'Work':
-                        return '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="shop-icon"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>';
-                    // Otros casos...
-                    default:
-                        return '';
-                }
             }
 }

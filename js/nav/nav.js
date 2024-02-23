@@ -2,6 +2,8 @@
 import { updateCartItems } from '../cart/cart.js';
 export function initializeHamburger() {
     const hamburgerIcon = document.querySelector('.iconBurger');
+    const cartIcon = document.querySelector('.iconCarrito');
+    console.log("cartIconNav: ",cartIcon);
     const mobileMenuContainer = document.querySelector('.mobile-menu-container');
     const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
     const closeButton = document.querySelector('.close-button');
@@ -14,6 +16,7 @@ export function initializeHamburger() {
     // Evento clic en el ícono de hamburguesa
     hamburgerIcon.addEventListener('click', toggleMobileMenu);
 
+
     // Evento clic en el botón de cierre
     closeButton.addEventListener('click', toggleMobileMenu);
 
@@ -22,9 +25,6 @@ export function initializeHamburger() {
         link.addEventListener('click', function () {
             // Cierra el menú cuando se hace clic en un enlace
             toggleMobileMenu();
-
-            // Agrega el código para desplazarse a la sección correspondiente
-            // Puedes utilizar la lógica que tengas para desplazarte a la sección
         });
     });
 }

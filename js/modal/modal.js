@@ -28,7 +28,4 @@ export function initializeModal() {
             closeModal();
         }
     })
-
-    // Inicializar el carrusel
-    // updateCarrusel();
 }

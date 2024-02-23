@@ -11,23 +11,11 @@
     transition: transform 1s, opacity 1s;
     justify-content: center;
     align-items: center;
-    
-
-    /* OLD */
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* margin: auto auto; */
-    /* height: 100vh; */
-    /* width: 960px; */
-    /* margin: 100px 400px; */
 }
 .grid-3-cols {
     display: grid;
     grid-template-columns: repeat(3, 30rem);
     column-gap: 5rem; 
-    /* OLD */
-    /* grid-template-columns: repeat(3, 300px);  */
-    /* grid-template-columns: repeat(3, 1fr); */
 }
 
 .btnCards:link,
@@ -37,10 +25,7 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
-
-    display: inline-block; /*sino le pongo inline-block, no me aplica el margin-bottom del objeto de arriba*/
-    /* Y si le pongo block, me hace chicle en todo el container padre, yo solo quiero que se ajuste al contenid */
-    /* pero respetando los margin de los objetos contiguos, para ello inline-block */
+    display: inline-block; 
     border-radius: 100px;
 }
 
@@ -48,7 +33,6 @@
 .btnCards:active {
     background-color: #099268;
 }
-
 
 .btn--big {
     font-size: 18px;
@@ -71,17 +55,6 @@
     border-radius: 12px;
     margin-bottom: 5rem;
     margin-top: 5rem;
-
-    /* OLD */
-    /* flex-direction:column; */
-    /* grid-template-columns: 300px; */
-    /* grid-template-columns: 1fr; */
-        /* grid-template-rows: 300px 300px; */
-    /* display: flex; */
-    /* height: 600px;  */
-    /* flex: 2; */ 
-
-    /* overflow: hidden; */
 }  
 .shop-img{
     border-top-left-radius: 12px;
@@ -93,18 +66,10 @@
     object-fit:cover;
     transition: transform 0.3s, opacity 0.3s;
     overflow: hidden;
-
-    /* old */
-    /* width: 100%;
-    height: auto; */ 
-    /* height: 300px;  */
-        /* justify-self: center; */
-    /* align-items: center;  */
 }
 
 .shop-overlay{
     overflow: hidden;
-
     transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -115,8 +80,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    /* z-index: 1;  */
 }
 
 .shop-overlay:hover{
@@ -125,28 +88,13 @@
     position: relative;
     z-index: 1;
     overflow: visible;
-
-
-    /* OLD */
-    /* max-height: 400px; */
-    /* width: 100%; */
-    /* object-fit: fill; */
-    /* object-fit:contain; */
-
 }
 
 .shop-overlay:hover .shop-img{
     height: 150%;
     transform-origin: center center;
-    
     border-radius: 12px;
-
-    /* OLD */
-    /* width: 110%; */
-    /* object-fit: cover; */
 }
-
-
 
 h3 {
     margin-bottom: 1rem;
@@ -174,7 +122,6 @@ h3 {
     stroke: #087f5b;
     width: 24px;
     height: 24px;
-    /* fill: red; */
 }
 
 .shop-price {
@@ -185,9 +132,7 @@ h3 {
     align-items: center;
 }
 
-
 /* Filtro */
-
 .filter-buttons {
     display: flex;
     gap: 16px;
@@ -200,13 +145,11 @@ h3 {
 .filter-button {
     background-color: var(--color-primary);
     color: #fff;
-    /* padding: 10px 20px; */
     padding: 1rem 2rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
-
     flex: 1;
 }
 
@@ -222,16 +165,6 @@ h3 {
     outline: none;
 }
 
-/* Estilos adicionales para que se vean como un switch */
-.filter-buttons {
-    
-
-}
-
-.filter-button {
-    
-}
-
 .filter-button:not(:last-child) {
     border-right: 2px solid var(--color-primary);
 }
@@ -240,16 +173,7 @@ h3 {
     display: none !important;
 }
 
-
-/* .filter-button.active {
-    background-color: var(--color-primary);
-    color: #fff;
-} */
-
-
-
 /* MEDIA PARA LA SHOP */
-
 @media (max-width: 1265px){
     .section-3{
         margin: 2rem 15rem;

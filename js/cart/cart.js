@@ -8,7 +8,7 @@ export function initializeCart() {
     console.log("Cart icon: ", cartIcon);
     const cartModal = document.createElement('div');
     const nav = document.querySelector('.nav-links-der');
-    const mobileMenu = document.querySelector('.mobile-menu-container');
+    const mobileMenu = document.querySelector('.cart-button-mobile');
     console.log("Cart loaded");
     cartModal.classList.add('cart-modal');
     cartModal.innerHTML = `
@@ -33,19 +33,16 @@ export function initializeCart() {
     // Agrega un manejador de eventos al menú móvil para abrir el carrito
     mobileMenu.addEventListener('click', (event) => {
         console.log("Mobile menu clicked");
-        const targetClassList = event.target.classList;
-        if (targetClassList.contains('iconCarrito') || targetClassList.contains('cart-button-mobile')) {
             console.log("Cart button clicked");
             cartModal.style.display = 'block';
             updateCartItems();
             hideCartNotification();
             event.stopPropagation();
-        }
+        
     });
 
     cartIcon.addEventListener('click', () => {
         cartModal.style.display = 'block';
-        // Aquí puedes obtener los elementos del carrito desde el localStorage y mostrarlos en cart-items
         updateCartItems();
         hideCartNotification();
     });
@@ -119,7 +116,6 @@ export function initializeCart() {
     function removeItemFromCart(index) {
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-        // Elimina el artículo en la posición 'index'
         cartItems.splice(index, 1);
 
         // Guarda los elementos actualizados en el localStorage

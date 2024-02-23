@@ -9,7 +9,7 @@ export function initializeStickyNavigation() {
     const navOffsetTop = nav.offsetTop;
 
     // Establece la cantidad de scroll requerida para que el nav se vuelva sticky
-    const scrollThreshold = 150; // Ajusta según sea necesario
+    const scrollThreshold = 150; 
 
     // Agrega un event listener para el evento scroll
     window.addEventListener('scroll', () => {

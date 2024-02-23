@@ -1,6 +1,6 @@
 // filter.js
 export function initializeFilter() {
-    // FILTROOO
+    // FILTRO
     const items2 = document.querySelectorAll('.shop');
     console.log(items2);
     const filterButtons = document.querySelectorAll('.filter-button');
@@ -15,11 +15,6 @@ export function initializeFilter() {
             this.classList.add('active');
 
             items2.forEach(item => {
-                // if (filter === 'all' || item.classList.contains(filter)) {
-                //     item.style.display = 'block';
-                // } else {
-                //     item.style.display = 'none';
-                // }
                 if (filter === 'all' || item.classList.contains(filter)) {
                     item.classList.remove('hidden');
                 } else {
