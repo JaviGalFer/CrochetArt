@@ -347,3 +347,9 @@
         margin-right: -4rem; 
     }
 }
+
+@media (max-width: 400px){
+    .nav-links-izq{
+        margin-right: -12rem; 
+    }
+}
